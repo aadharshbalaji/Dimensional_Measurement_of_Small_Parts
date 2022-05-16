@@ -16,13 +16,13 @@ class Edge_Detection:
 	    	cv2.imshow("image_" + str(k), img)
 	    cv2.waitKey(0)
 	    cv2.destroyAllWindows()
-
+	
+	# Reading Image
 	def read(self):
-		# Reading Image
 		self.__image = cv2.imread(self.__Source_path)
 	
+	# Converting to Gray and blur
 	def convert_gray(self):
-	# Setting gray and blur
 		try:
 			self.__gray = cv2.cvtColor(self.__image, cv2.COLOR_BGR2GRAY)
 			self.__blur = cv2.GaussianBlur(self.__gray, (9, 9), 0)
